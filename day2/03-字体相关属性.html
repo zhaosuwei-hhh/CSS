@@ -1,0 +1,49 @@
+<!-- CSS Fonts属性用于定义字体系列、大小、粗细、和文字样式 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    p {
+
+        font-family:'Microsoft YaHei',Times,serif;
+        /*  1.字体系列  */
+        /*  css用font-family属性定义文本的字体系列,写在style里面  */
+        /* Microsoft YaHei是微软雅黑，也可以写英文 */
+        /* ''用于有由多个单词组成的一类字体名字，无空格的字体名字可以不用 */
+        /* 字体类型之间用英文逗号隔开 */
+        /* 浏览器打开时优先用第一个字体，第一个没有的话往后顺延 */
+        /* 可以直接给<body></body>来指定字体 */
+        font-size: 20px;
+        /* 2.字体大小 */
+        /* 用font-size来规定字体大小，切记不要忘记px */
+        /* 若直接给<body></body>来指定字体大小时，标题<h1>等要单独再规定一下，比较特殊 */
+        font-weight: normal;
+        /* 3.字体的粗细 */
+        /* 用font-weight来规定字体粗细 100-900，实际里面更喜欢用数字*/
+        /* normal正常字体，默认字体 等效于400，后面不加单位 */
+        /* bold粗体 等效于700，注700后面不加单位*/
+        font-style: normal;
+        /* 4.文字样式 */
+        /* 用font-style来规定文字样式 */
+        /* normal是正常值，italic是斜体 */
+        /* 可以让<em>里的倾斜变得不倾斜，负负得正 */
+    }
+    h2 {
+        font: italic 700 16px/20px 微软雅黑;
+        /* 复合属性，font-style font-weight font-size/line-height（行高） font-family前后位次不能改变，中间用空格来隔开 */
+        /* style、weight不需要时可以省略，但size、family必须存在，否则不能连写 */
+    }
+    </style>
+</head>
+<body>
+    <h2>今天很开心</h2>
+    <p>明天也很开心</p>
+    <p>每天都很开心</p>
+    
+</body>
+</html>
+
+

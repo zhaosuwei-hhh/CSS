@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    /* 1.文本颜色 */
+        /* 第一种写法 ，预定义*/
+        h1{
+            color: pink;
+        }
+        /* 第二种写法,16进制，#开头 */
+        h2{
+            color: #00ffea;
+        }
+        /* 第三种写法 ,RGB代码红绿蓝*/
+        h3{
+            color: rgb(255,0,0);
+        }
+    /* 2.对齐文本 */
+        /* center/left/right */
+        h4{
+            text-align: center;
+        }
+    /* 3.装饰文本 */
+        /* none默认无装饰，underline下划线(链接a自带下划线) */
+        /* overline上划线，line-through删除线 */
+        /* 下划线最常用 */
+        h5{
+            text-decoration: underline;
+        }
+        /* 取消a默认的下划线 */
+        a{
+            text-decoration: none;
+        }
+    /* 4.文本缩进 */
+        /* 让文本的首行缩进多少距离 */
+        /* 一定要带单位 */
+        /* 单位前为正值为缩进(向右)，单位前为负值为突出 */
+        /* 相对单位em，是当前元素一个文字的大小 */
+        /* px为精确单位 */
+        p{
+            text-indent: 2em;
+        }
+    /* 5.行间距 */
+        /* 行间距由上间距、文本高度、下间距三部分组成 */
+        /* 行间距减去文本高度等于上间距与下间距之和 */
+        /* 行间距等于第一行的最下沿到第二行的最下沿 */
+        div{
+            line-height: 26px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>轻松熊</h1>
+    <h2>轻松熊</h2>
+    <h3>轻松熊</h3>
+    <h4>轻松熊</h4>
+    <h5>轻松熊</h5>
+    <h6>轻松熊</h6>
+    <a href="#">轻松熊</a>
+    <p>轻松熊是一种态度</p>
+    <p>入党教材</p>
+    <div>轻松熊</div>
+</body>
+</html>
