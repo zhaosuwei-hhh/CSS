@@ -1,0 +1,54 @@
+<!-- 复合选择器是基础选择器的组合 -->
+ <!-- 后代选择器、子选择器、并集选择器、伪类选择器 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 1.后代选择器（重要）,
+        可以单独把父里面的子选出来，一定要有父 */
+        /* 选择ol里面的li */
+        /* 元素父和元素子中间必须用空格隔开 ，最终改的是子的样式*/
+        /* 元素子可以是儿子、孙子、重孙子 */
+        ol li {
+            color: red;
+        }
+        ul li a {
+            color: green;
+        }
+        /* 有两组ul,可以用标签选择器、类选择等来进行区分 */
+        .hh li {
+            color:blueviolet;
+        }
+
+        /* 2.子选择器 */
+        /* 元素父>元素子 */
+        /* 元素子只能是儿子 */
+        ul>div {
+            color:aquamarine;
+        }
+
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="#">小草</a></li>
+        <div>小花</div>
+        <li><div>大花</div></li>
+
+    </ul>
+    <ol>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ol>
+    <ol class="hh">
+        <li></li>
+        <li></li>
+        <li></li>
+    </ol>
+</body>
+</html>
