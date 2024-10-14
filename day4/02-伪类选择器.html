@@ -1,0 +1,50 @@
+<!-- 用于给某些选择器添加特殊效果，或选择第一个、第二个元素 -->
+<!-- 用冒号来表示，:hover -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    /* 一、链接伪类选择器 */
+            /* 1.选择所有未被访问过的链接  a:link 中间都没有空格哈*/
+        a:link{
+        color:black ;
+        text-decoration: none;
+        }
+           /* 2.选择所有被访问过的链接 a:visited  */
+        a:visited {
+            color:blue;
+        }
+           /* 3.鼠标经过的链接 a:hover  */
+        a:hover{
+            color:blueviolet;
+        }
+           /* 4.鼠标按下不松开时 a:active  */
+        a:active{
+            color: aquamarine;
+        }
+           /* 注意事项：顺序 link visited hover active  */
+           /* love hate */
+           /* 实际中，想要给链接制定样式，需要单独，若选择body，对链接是不起作用的 */
+    /* 二、focus伪类选择器 */
+        /* 用于选取获得焦点的表单元素 */
+        /* 把获得光标的input表单元素选取出来 */
+        input:focus{
+            background-color: pink;
+            color: blue;
+            /* color 是指文字颜色 */
+        }
+
+    </style>
+ </head>
+ <body>
+    <a href="#">天天开心</a>
+    <a href="#">天天高兴</a>
+    <input type="text">
+    <input type="text">
+    <input type="text">
+    <input type="text">
+ </body>
+ </html>
