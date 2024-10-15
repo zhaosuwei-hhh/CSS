@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 元素显示模式转换 -->
+    <!-- 常见的是把行内元素转换成块元素 -->
+     <!-- display是转换 -->
+    <style>
+        a {
+            width: 150px;
+            height: 50px;
+            background-color: pink;
+            display: block;
+            /* 把行内元素转换为块元素，宽高有效 */
+        }
+        div {
+            width: 300px;
+            height: 100px;
+            background-color: rgb(101, 94, 96);
+            display: inline;
+            /* 把块元素转换成行内元素，一行可以显示多个，宽高无效 */
+        }
+        span {
+            width: 100px;
+            height: 200px;
+            background-color: #7c1c1c;
+            display: inline-block;
+            /* 把行内元素转换成行内块元素，有宽高，也可以在同一行 */
+        }
+
+    </style>
+</head>
+<body>
+   <a href="#">我们是对方特别的人</a>
+   <div>红尘客栈风似刀</div>
+   <div>骤雨落宿命敲</div>
+   <span>任武林谁领风骚</span>
+   <span>我却只为你折腰</span>
+</body>
+</html>

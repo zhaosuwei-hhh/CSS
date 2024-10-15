@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    div {
+         /* 1.背景颜色  */
+         /* 一般情况下，默认是透明transparent */
+        background-color: pink;
+
+
+        /* 2.背景图片 */
+        /* ul 里面写图片地址; */
+        /* 一般情况下，默认是none */
+        background-image: url();
+
+
+        /* 3.背景平铺 */
+        /* no-repeat是指不平铺 */
+        /* repeat 是平铺 */
+        /* background-repeat: repeat-x;是指沿着x轴平铺 */
+        /* background-repeat: repeat-y;是指沿着y轴平铺 */
+        /* 页面元素既可以添加背景颜色也可以添加背景图片，图片会覆盖住颜色 */
+        background-repeat: no-repeat;
+
+
+        /* 4.背景图片的位置 */
+        background-position: x y;
+        /* x坐标和y坐标，可以使用方位名词或者是精确单位 */
+
+        /* 4.1 x、y若都是方位名词，最好第一个写行 right center left，第二个写列 top center bottom， */
+        /* 实际上与先后顺序无关 */
+        background-position: center top; 
+        /* 如果只指定一个方位，那么另一个默认居中对齐 */
+
+        /* 4.2 x、y是精确单位 */
+        /* 那么第一个必须是x，第二个必须是y坐标 */
+        background-position: 20px 50px;
+        /* 如果只写一个，那么默认这个数值是x */
+        background-position: 20px ;
+
+        /* 4.3 混合单位 */
+        /* 一定是有顺序的，第一个是水平，第二个是竖 */
+        background-position: right 30px;
+        /* 如果只给一个，默认是水平的，且另一个默认为center */
+        background-position: 20px ;
+
+
+        /* 5.背景固定 */
+        /* 默认是滚动的 */
+        background-attachment: fixed;
+        /* fixed为固定  scroll为随对象滚动 */
+
+        /* 6.背景复合写法 */
+        /* 不要求顺序 */
+        /* 一般习惯约定顺序为背景颜色、背景图片地址、背景平铺、背景图像滚动、背景图片位置 */
+        bcakground: black url() no-repeat fixed center top;
+        /* 注意中间用空格隔开 */
+
+
+        /* 7.背景颜色半透明 */
+        background: rgba(0,0,0,0.3);
+        /* 最后一个值是alpha透明度，取值范围是0-1 */
+        /* 0是最透明的 */
+        /* 可以把0.3写作.3 */
+        /* 不影响盒子里面的内容 */
+
+
+        
+
+    }
+
+    </style>
+</head>
+<body>
+    <div>百里</div>
+</body>
+</html>

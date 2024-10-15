@@ -1,0 +1,23 @@
+<!-- 层叠性：给相同的选择器设置相同的样式，即属性相同，属性值不同 -->
+<!-- 就近原则，哪个样式离结构近 -->
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            div {
+                color: red;
+                background-color: pink;
+            }
+            div {
+                color: aqua;
+            }
+        </style>
+    </head>
+    <body>
+        <div>晴天</div>
+    </body>
+    </html>
+<!-- 只覆盖冲突的部分，不冲突的部分仍保留 -->

@@ -1,0 +1,36 @@
+<!-- 给同一个元素，指定多个选择器，解决到底执行哪个选择器的问题 -->
+<!-- 选择器相同，按层叠性，遵循就近原则 -->
+<!-- 选择器不同则根据选择器的权重来执行 -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            color: aquamarine;
+        }
+        .hh{
+            color: brown;
+        }
+        #xx {
+            color: blue;
+        }
+        div{
+            color: pink!important;
+        }
+        /* 在标签选择器后面加上!important,即为无穷大 */
+    </style>
+ </head>
+ <body>
+    <div class="hh" id="xx" style="color: blueviolet;">故事的小黄花</div>
+ </body>
+ </html>
+
+<!-- 继承或*                0,0,0,0 -->
+<!-- 标签选择器              0,0,0,1 -->
+<!-- 类选择器、伪类选择器     0,0,1,0 -->
+<!-- ID选择器                0,1,0,0 -->
+<!-- 行内样式style=""        1,0,0,0 -->
+<!-- !important             ∞无穷大 -->

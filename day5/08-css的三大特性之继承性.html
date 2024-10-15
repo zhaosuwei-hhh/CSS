@@ -1,0 +1,31 @@
+<!-- 子标签会继承父标签里面的某些样式 -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            color: blue;
+            font: 12px/24px;
+            /* 12px是字体大小，24px是行高 */
+            /* 行高可以被继承 */
+            /* 行高可以跟单位也可以不跟单位 */
+            /* 不跟单位时，是当前子标签文字大小的倍数 */
+            /* 比如 font:12px/1.5; 
+            是指子标签的行高是子标签的文字大小(有指定按指定，无指定按继承)的1.5倍*/
+        }
+    </style>
+ </head>
+ <body>
+    <div>
+        <p>
+            晴天见
+        </p>
+    </div>
+ </body>
+ </html>
+<!-- p是div的子标签，继承了div里面的样式 -->
+<!-- 只继承某些：以text-  font-  line- 开头的可以继承，还有color属性 -->
+<!-- 若子标签中含有一些样式则不会继承，只继承自己所没规定的样式 -->
