@@ -1,0 +1,76 @@
+<!-- 网页布局的本质就是利用盒子模型 -->
+<!-- 盒子模型包括边框、外边距、内边距、实际内容 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            /* 边框样式 */
+            /* none无边框 solid实线边框 dashed虚线边框 dotted点线边框 */
+            border-style: none;
+
+            /* 边框宽度 */
+            border-width: 2px;
+
+            /* 边框颜色 */
+            border-color: #000;
+        }
+
+        p {
+            /* 边框的复合写法，没有顺序 */
+            border: 1px solid red;
+        }
+
+        h1 {
+            /* 边框可以分开来写 */
+            border-left: 1px solid blue;
+            border-top: 2px dashed pink;
+            border-bottom: 3px dotted purple;
+            border-right: 4px solid red;
+        }
+
+        .sanjiaoxing {
+            /* 利用透明颜色，形成三角形 */
+            border-left: 40px solid blue;
+            border-top: 40px solid transparent;
+            border-bottom: 40px solid transparent;
+            border-right: 40px solid transparent;
+        }
+        /* 边框的覆盖问题 */
+        /* 下覆盖上，只覆盖重叠属性 */
+
+        /* 表格的细边边框，解决1+1=2显粗的问题 */
+        table  tr td {
+            border: 2px solid #000;
+            
+        }
+        table {
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+
+<body>
+    <div>今天真开心</div>
+    <p>明天也开心</p>
+    <h1>和你在一起好开心</h1>
+    <h2 class="sanjiaoxing">嘻嘻</h2>
+    <table>
+        <tr>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+    </table>
+</body>
+
+</html>

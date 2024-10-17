@@ -1,0 +1,55 @@
+<!-- 外边距是盒子与盒子之间 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <left:>
+    <style>
+    h1 {
+        /* 外边距margin */
+        /* 用法与padding一致 */
+        border: 2px solid pink;
+        width: 80px;
+        height: 80px;
+        margin-left: 2px;
+        margin-top: 2px;
+        margin-bottom: 2px;
+        margin-right: 2px;
+
+    }
+    p {
+        /* margin的复合写法 */
+            /* 1.一个值 */
+            /* 代表上下左右都是5px */
+            margin: 5px;
+            /* 2.两个值 */
+            /* 分别是上下  左右 */
+            margin: 5px 10px;
+            /* 3.三个值 */
+            /* 分别是 上 左右 下 */
+            margin: 5px 10px 20px;
+            /* 4.四个值 */
+            /* 顺时针，分别是上 右 下 左 */
+            margin: 5px 10px 20px 30px;
+    }
+    /* 外边距可以让块级盒子水平居中 */
+    /* 1.盒子必须指定宽度 */
+    /* 2.左右外边距都必须设成auto */
+    /* 也可以直接写成margin:auto; */
+    div {
+        background-color: pink;
+        width: 200px;
+        margin: auto;
+    }
+    /* 行内元素、行内块元素要想水平居中，给父级加上text-align:center; */
+
+    </style>
+</head>
+<body>
+    <h1>喜欢你是我的秘密</h1>
+    <div>一鄂红，二色莲</div>
+    <p>长相厮守</p>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!-- 内边距是盒子与文本之间 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            /* 内边距padding-方位 */
+            border: 2px solid pink;
+            width: 80px;
+            height: 80px;
+            padding-left: 30px;
+            padding-top: 30px;
+        }
+        p {
+            /* padding的复合写法 */
+            /* 1.一个值 */
+            /* 代表上下左右都是5px */
+            padding: 5px;
+            /* 2.两个值 */
+            /* 分别是上下  左右 */
+            padding: 5px 10px;
+            /* 3.三个值 */
+            /* 分别是 上 左右 下 */
+            padding: 5px 10px 20px;
+            /* 4.四个值 */
+            /* 顺时针，分别是上 右 下 左 */
+            padding: 5px 10px 20px 30px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div>乞求</div>
+    <p>日子漫长而悠远，日日是好日</p>
+</body>
+</html>
