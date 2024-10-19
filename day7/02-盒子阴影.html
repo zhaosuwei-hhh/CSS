@@ -1,0 +1,39 @@
+<!-- 盒子阴影不占用盒子空间 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 80px;
+            height: 100px;
+            background-color: yellow;
+            margin: 80px auto;
+            /* box-shadow: h-shadow v-shadow blur spread color inset; */
+            /* 盒子阴影：水平阴影  垂直阴影  模糊程度  阴影的尺寸大小  阴影的颜色  将外部阴影改成内部 */
+            /* 水平阴影和垂直阴影是必须的，允许负值，表示左、上， */
+            /* 其他项都是可选的默认的是外部阴影(outset) */
+            box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3) ;
+        }
+
+
+        /* 本来没有阴影，鼠标一经过时出现阴影 */
+        h1 {
+            width: 80px;
+            height: 100px;
+            background-color: rgb(115, 211, 77);
+            margin: 80px auto;
+
+        }
+        h1:hover {
+            box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3) ;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <h1></h1>
+</body>
+</html>
