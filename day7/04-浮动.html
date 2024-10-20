@@ -1,0 +1,74 @@
+<!-- css的三种网页布局：标准流、浮动、定位 -->
+ <!-- 网页布局第一准则：多个块级元素纵向排列找标准流， -->
+ <!-- 横向排列找浮动 ,用标准流父级管上下，浮动子级管左右-->
+
+
+<!-- 浮动有左浮和右浮，一直浮动到上一个的边缘 -->
+<!-- float: left/right/none(默认); -->
+
+<!-- 浮动的特性：1.脱标 -->
+           <!-- 2.不再保留原先的位置，相当于在空中 -->
+           <!-- 3.行显示，按上沿对齐，若父级宽度装不下盒子，则另起一行，之间无空隙 -->
+           <!-- 4.浮动元素都有行内块元素的特性
+                  eg.行内元素可以设置宽和高，块级元素可以一行放多个,
+                  在块级元素没有设置宽时，内容有多大，盒子就有多宽-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            background-color: red;
+            width: 100px;
+            height: 100px;
+        }
+        .left {
+            float: left;
+            background-color: pink;
+            /* 简写成fll  */
+        }
+        .right {
+            float: right;
+            /* 可以简写成flr */
+        }
+        .float {
+            float: left;
+            width: 200px;
+            height: 150px;
+            background-color: yellow;
+        }
+        
+        span  {
+            width: 80px;
+            height: 80px;
+            background-color: blue;
+            float: left;
+        }
+
+        p {
+            height: 90px;
+            background-color: palevioletred;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="left">1</div>
+    
+    <!-- 1号浮动盒子会盖住2号标准盒子，但是无法盖住2号盒子的文字部分 -->
+
+    <div class="float">3</div>
+    <div class="float">4</div>
+    <div class="float">5</div>
+    <!-- 三个盒子靠左 沿上沿对齐 之间无空隙 -->
+
+    <span>行内</span>
+    <p class="right">爱</p>
+
+    
+</body>
+</html>
