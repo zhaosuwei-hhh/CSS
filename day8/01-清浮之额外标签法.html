@@ -1,0 +1,49 @@
+<!-- 若不给父级盒子高度(有时无法确定所需的父级盒子高度)，由子级元素撑开， -->
+<!-- 若子级元素都为浮动，那么父级盒子的高度为0，影响下一个标准流 -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            background-color: pink;
+        }
+        .box11 {
+            width: 40px;
+            height: 60px;
+            background-color: red;
+            float: left;
+        }
+        .box12 {
+            width: 50px;
+            height: 60px;
+            background-color: blue;
+            float: left;
+        }
+        .box2 {
+            width: 100px;
+            height: 50px;
+            background-color: palegreen;
+        }
+        .clear {
+            clear: both;
+        }
+        /* 在第一个标准流的最后进行封装，用一个新的盒子(这个盒子必须是块级元素,不能是行内元素)带有clear属性
+        这样就不会因为浮动而影响下一个标准流 */
+        /* clear:both; */
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="box11"></div>
+        <div class="box12"></div>
+        <div class="clear"></div>
+    </div>
+    <div class="box2"></div>
+</body>
+</html>

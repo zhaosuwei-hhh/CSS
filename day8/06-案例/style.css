@@ -1,0 +1,17 @@
+.w {
+    margin: 0 auto;
+    width: 1200px;
+}
+.header {
+    height: 42px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: pink;
+}
+.logo {
+    width: 198px;
+    height: 42px;
+    background-color: paleturquoise;
+    float: left;
+
+}
