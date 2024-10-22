@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+/* 板心 */
+.w {
+    margin: 0 auto;
+    width: 1200px;
+}
+body {
+    background-color: #f3f5f7;
+}
+.header {
+    height: 42px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    
+}
+.logo {
+    width: 198px;
+    height: 42px;
+    
+    float: left;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+.nav {
+    float: left;
+    margin-left: 60px;
+}
+/* a本身就是行内元素，是li的存在让几个链接竖着，所以应该给li加浮动 */
+.nav ul li  {
+    float: left;
+    margin: 0 15px;
+}
+.nav {
+    float: left;
+    margin-left: 60px;
+}
+.nav ul li a {
+    display: block;
+    height: 42px;
+    padding: 0 10px;
+    /* 几个小盒子里面的字数不一样，没办法给定宽，选择用内边距padding来撑开 */
+    color: #050505;
+    line-height: 42px;
+    font-size: 18px;
+}
+.nav ul li a:hover {
+    border-bottom:2px solid rgb(49, 130, 196);
+    color: rgb(49, 130, 196);
+}
+.search {
+    width: 412px;
+    height: 42px;
+    float: left;
+    
+    margin-left: 50px;
+}
+.search input {
+    width: 345px;
+    height: 40px;
+    border: 1px solid blue;
+    border-right: 0;
+    font-size: 14px;
+    padding-left: 15px;
+    float: left;
+    /* padding会撑大盒子，所以需要在盒子的宽里面再减去 */
+}
+.search button {
+    width: 50px;
+    height: 42px;
+    float: left;
+    border: 0;
+    background: url(images/2.png);
+}
+.user {
+    line-height: 42px;
+    float: right;
+    margin-right: 30px;
+    margin-top: 5px;
+}
+.banner {
+    height: 421px;
+    background-color: #1c036c;
+}
+.banner .w {
+    height: 421px;
+    background: url(images/8.png) no-repeat top center;
+    /* no-repeat是不重复，top是靠上，center是左右居中 */
+    /* w已经给过宽度 */
+}
+.banner .left {
+    width: 190px;
+    height: 421px;
+    background-color: rgba(0, 0, 0, 0.3);
+    float: left;
+}
+.left ul li {
+    height: 46px;
+    line-height: 46px;
+    /* 一定要给定行高，行高等于盒子高度时，才能做到文字居中 */
+    padding: 0 20px;}
+.left ul li a{
+    font-size: 14px;
+    color: #fff;
+}
+.left .left-list li a:hover {
+    color: pink;
+}
+.left ul li a span {
+    float: right;
+}
+.banner .right{
+    width: 230px;
+    height: 300px;
+    background-color: #fff;
+    float: right;
+    margin-top: 50px;
+    /* 标准流的盒子会存在父级元素外边距塌陷问题， */
+    /* 但浮动的盒子不存在这一问题 */
+}
+.banner .right .right-header {
+    width: 230px;
+    height: 50px;
+    background-color: skyblue;
+    font-size: 20px;
+    color: #fff;
+    line-height: 50px;
+    text-align: center;
+}
+.banner .right .right-body {
+    height: 250px;
+    padding:0 20px ;
+}
+.banner .right .right-body ul li{
+    padding: 15px 0;
+    border-bottom: 1px solid grey;
+}
+.banner .right .right-body ul li h4{
+    color: #000;
+    font-size: 16px;
+}
+.banner .right .right-body ul li p {
+    color: grey;
+    font-size: 12px;
+    
+}
+.banner .right .right-body .more {
+    display: block;
+    text-align: center;
+    color: blue;
+    border: 1px solid blue;
+    font-size: 16px;
+    height: 38px;
+    line-height: 38px;
+    font-weight: 700;
+    margin-top: 5px;
+}
+.goods {
+    height: 60px;
+    background-color: #fff;
+    box-shadow: 0px 4px 3px 3px rgba(0, 0, 0, 0.3);
+    line-height: 60px;
+    /* 行高会继承给子元素 */
+}
+.goods h3 {
+    float: left;
+    margin-left: 30px;
+    font-size: 16px;
+    color: #4183af;
+}
+.goods ul {
+    float: left;
+    margin-left: 30px;
+}
+.goods ul li {
+    float: left;
+    
+}
+.goods ul li a {
+    padding: 0 30px;
+    color: black;
+    font-size: 16px;
+    border-left: 1px solid grey;
+}
+
+.goods .mod {
+    float: right;
+    margin-right: 30px;
+    font-size: 16px;
+    color: #4183af;
+}
+
+
