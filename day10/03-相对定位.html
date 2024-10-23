@@ -1,0 +1,32 @@
+<!-- relative -->
+<!-- 自恋定位，相对于自身来走 -->
+<!-- 移动后，虽然盒子走了但位置仍然保留（不脱标），定位的盒子可能会盖住其他的盒子 -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .one {
+        width: 300px;
+        height: 400px;
+        background-color: pink;
+        position: relative;
+        top: 100px;
+        /* 把未定位前的自身当做父级，相当于向下移动了100px */
+        left: 200px;
+        /* 相当于向左移动了200px */
+        }
+        .two {
+        width: 300px;
+        height: 400px;
+        background-color: blue;
+        }
+    </style>
+ </head>
+ <body>
+    <div class="one"></div>
+    <div class="two"></div>
+ </body>
+ </html>

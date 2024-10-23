@@ -1,0 +1,64 @@
+<!-- absolute -->
+<!-- 相对于父级元素来移动的 -->
+
+<!-- 子绝父相：子级用绝对定位，那么父级元素用相对定位(只是比较常用) 因为相对定位占位置 -->
+<!-- 绝对定位不再占有原先位置，可以被占用 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    /* 1.没有父级元素，用浏览器来当父级元素 */
+        .one {
+            width: 200px;
+            height: 300px;
+            background-color: paleturquoise;
+            position: absolute;
+            bottom: 200px;
+            right: 200px;
+            /* 没有父级元素时，写右下就以对齐右下为标准开始移动 */
+        }
+    /* 2.若有父级元素，但父级元素没有定位，则继续以浏览器为准 */
+        .two1 {
+            width: 200px;
+            height: 300px;
+            background-color: palegoldenrod;
+            position: absolute;
+            top: 200px;
+            left: 200px;
+            /* 相当于左上来对齐，进行移动 */
+        }
+    /* 3.有父级元素且有定位(只要不是静态就可以)  孩子以父级为准，以最近一级带定位的父级为准 */
+        .three {
+            width: 100px;
+            height: 100px;
+            background-color: rgb(52, 156, 99);
+            position: absolute;
+            top: 300px;
+        }
+        .three1 {
+            width: 50px;
+            height: 20px;
+            background-color: red;
+            position: absolute;
+            top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="one"></div>
+    <div class="two">
+        <div class="two1">
+        </div>
+    </div>
+    <div class="three">
+        <div class="three1">
+
+        </div>
+    </div>
+</body>
+</html>
