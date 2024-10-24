@@ -1,0 +1,43 @@
+<!-- z-index:1; -->
+<!-- 数值越大，优先级越大 -->
+<!-- 数字后面不可以跟单位 -->
+<!-- 只有有定位的盒子才有z-index属性 -->
+<!-- 若不给属性值或属性值相同，则按照后来者居上原则来进行覆盖 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .one {
+            position: fixed;
+            left: 80px;
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            z-index: 1;
+        }
+        .two {
+            position: fixed;
+            left: 30px;
+            width: 100px;
+            height: 100px;
+            background-color: palegoldenrod;
+            z-index: 2;
+        }
+        .three {
+            position: absolute;
+            left: 90px;
+            width: 100px;
+            height: 100px;
+            background-color: paleturquoise;
+        }
+    </style>
+</head>
+<body>
+    <div class="one"></div>
+    <div class="two"></div>
+    <div class="three"></div>
+</body>
+</html>

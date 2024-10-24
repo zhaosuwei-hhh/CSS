@@ -1,0 +1,48 @@
+<!-- 固定定位移到板心左侧 -->
+<!-- left走50% -->
+<!-- margin-left也走板心宽度的一半-->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father {
+            height: 500px;
+            width: 500px;
+            background-color: pink;
+            margin: auto;
+        }
+/* <!-- 固定定位移到板心左侧 --> */
+/* <!-- left走50% --> */
+/* <!-- margin-left也走板心宽度的一半--> */
+        .son {
+            position: fixed;
+            height: 100px;
+            width: 20px;
+            left: 50%;
+            margin-left: 250px;
+            /* 250px为板心宽度的一半 */
+            background-color: palegreen;
+        }
+/* <!-- 固定定位移到板心右侧 --> */
+/* <!-- right走50% --> */
+/* <!-- margin-right也走板心宽度的一半--> */
+        .son2 {
+            position: fixed;
+            height: 200px;
+            width: 30px;
+            right: 50%;
+            margin-right: 250px;
+            background-color: palegoldenrod;
+        }
+    </style>
+ </head>
+ <body>
+    <div class="father">
+        <div class="son"></div>
+        <div class="son2"></div>
+    </div>
+ </body>
+ </html>

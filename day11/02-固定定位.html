@@ -1,0 +1,36 @@
+<!-- 固定位置：浏览区滚动时，被固定的区域不动 -->
+<!-- position：fixed -->
+<!-- 1.移动时，以浏览器的可视窗口为参照物 -->
+<!-- 2.与父级元素没有任何关系 -->
+<!-- 3.不随滚动条的滚动而滚动 -->
+<!-- 4.不保留原有位置，脱标 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            position: relative;
+            left: 50px;
+        }
+        .son {
+            width: 50px;
+            height: 40px;
+            background-color: palegreen;
+            position: fixed;
+            top: 20px;
+            left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+</body>
+</html>

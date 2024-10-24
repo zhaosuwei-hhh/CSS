@@ -1,0 +1,32 @@
+<!-- 子绝父相：子级用绝对定位，那么父级元素用相对定位 -->
+<!-- 防止子级找不到父级 -->
+<!-- 也让父级有保留位置，不至于产生叠加 -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father {
+            width: 300px;
+            height: 300px;
+            position: relative;
+            background-color: pink;
+        }
+        .son {
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            background-color: palegreen;
+            left: 10px;
+            top: 10px;
+        }
+    </style>
+ </head>
+ <body>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+ </body>
+ </html>
