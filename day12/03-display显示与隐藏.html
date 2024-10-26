@@ -1,0 +1,34 @@
+<!-- display   
+ none隐藏元素  block显示元素-->
+<!-- visibility -->
+<!-- overflow -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .one {
+            /* display: none; */
+            /* display隐藏元素之后，不再保留原来位置，只是藏起来了，并没有消失 */
+            display: block;
+            /* 改成block以后会再次看见 */
+            /* 如果既有block又有none，那么后者居上，对前者进行覆盖 */
+            display: none;
+            width: 200px;
+            height: 200px;
+            background-color: palegoldenrod;
+        }
+        .two {
+            width: 300px;
+            height: 300px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="one">喜欢</div>
+    <div class="two">开心</div>
+</body>
+</html>

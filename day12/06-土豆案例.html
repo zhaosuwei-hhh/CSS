@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .big {
+        position: relative;
+        width: 444px;
+        height: 320px;
+        background-color: pink;
+        margin:  30px auto;
+    }
+    .big img {
+        width: 100%;
+        height: 100%;
+    }
+    .mask{
+        display: none;
+        /* 最开始先隐藏 */
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.4) url(./2.png) no-repeat center;
+        /* 添加了背景图片，no-repeat取消了重复，center进行了居中 */
+        /* 注意要用background，而不是background-color */
+    }
+    /* 当鼠标经过大盒子，让里面的遮盖层显示出来 */
+    /* 在hover后面加上孩子 */
+    .big:hover .mask {
+        display: block;
+        /* 经过的时候让他显示出来 */
+    }
+
+
+    </style>
+</head>
+<body>
+    <div class="big">
+        <div class="mask"></div>
+        <img src="./1.png" alt="">
+    </div>
+</body>
+</html>

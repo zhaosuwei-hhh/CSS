@@ -1,0 +1,110 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        /* 去除小白色圆点前面的默认黑色小圆点 */
+        li {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        .tb-promo {
+            position: relative;
+            width: 520px;
+            height: 280px;
+            background-color: palegoldenrod;
+            margin: 100px auto;
+        }
+        /* .tb-promo img {
+            width: 100px;
+            height: 200px;
+        } */
+         /* 可以单独对盒子里的图片规定大小，防止撑大盒子 */
+        .tb-promo .prev {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            margin-top: -15px;
+            /* 绝对定位盒子垂直居中分两步 */
+            width: 20px;
+            height: 30px;
+            background-color: rgba(0, 0, 0, 0.3);
+            text-align: center;
+            /* 水平居中 */
+            line-height: 30px;
+            /* 垂直居中让行高等于盒子高度 */
+            color: aliceblue;
+            border-radius: 0 15px 15px 0;
+            /* 想变右上角和右下角，radius值需要等于盒子高度的一半 */
+            /* 顺序为，从左上开始的顺时针 */
+        }
+        .tb-promo .next {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            margin-top: -15px;
+            /* 绝对定位盒子垂直居中分两步，别忘记是负号 */
+            width: 20px;
+            height: 30px;
+            background-color: rgba(0, 0, 0, 0.3);
+            text-align: center;
+            /* 水平居中 */
+            line-height: 30px;
+            /* 垂直居中让行高等于盒子高度 */
+            color: aliceblue;
+            border-radius: 15px 0 0 15px;
+            /* 想变左上角和左下角，radius值需要等于盒子高度的一半 */
+            /* 顺序为，从左上开始的顺时针 */
+        }
+        .promo-nav {
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            margin-left: -35px;
+            width: 70px;
+            height: 13px;
+            background-color: rgba(255, 255, 255,0.3);
+            /* 255 255 255是纯白色 */
+            border-radius: 5px;
+        }
+        div ul li {
+            float: left;
+            width: 8px;
+            height: 8px;
+            background-color: #fff;
+            border-radius: 4px;
+            margin: 3px ;
+        }
+        .selected {
+            background-color: red;
+        }
+        
+
+    </style>
+ </head>
+ <body>
+    <div class="tb-promo">
+        <img src="./1.png" alt="">
+        <a href="#" class="prev">&lt;</a>
+        <!--    小于号是&lt;   -->
+        <a href="#" class="next">&gt;</a>
+        <!--    大于号是&gt;    -->
+        <ul class="promo-nav">
+            <li class="selected"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+ </body>
+ </html>

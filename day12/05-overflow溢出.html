@@ -1,0 +1,79 @@
+<!-- 1.visible:不剪切内容也不添加滚动条 。假如显式声明此默认值， -->
+<!-- 对象将被剪切为包含对象的window或frame的大小,并且clip属性设置将失效 -->
+
+<!-- 2.auto:此为body对象和textarea的默认值。 -->
+<!-- 在需要时剪切内容并添加滚动条  -->
+
+<!-- 3.hidden :不显示超过对象尺寸的内容 -->
+
+<!-- 4.scroll:总是显示滚动条 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* visible  */
+        .love {
+            width: 200px;
+            height: 100px;
+            background-color: palegreen;
+            overflow: visible;
+            /* 相当于什么也不干，依然保留超出的部分 */
+            /* 多出的内容会盖在下一个盒子上 */
+        }
+
+        /* auto */
+        .go {
+            width: 100px;
+            height: 100px;
+            background-color: palegoldenrod;
+            overflow: auto;
+            /* 只有在溢出的时候添加滚动条 */
+        }
+
+        /* hidden */
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            overflow: hidden;
+            /* 把溢出的部分进行隐藏 ，只是隐藏了，没有删掉*/
+            /* 在有定位的盒子上，慎用，（eg.子绝父相），也会切掉子所超出的部分 */
+        }
+
+        /* scroll  */
+        .happy {
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+            overflow: scroll ;
+            /* 无论是否溢出，都显示滚动条 */
+        }
+    </style>
+</head>
+<body>
+    <div class="love">
+        哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+        哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+        哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+    </div>
+    <div class="go">
+        哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+        哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+        哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+    </div>
+    <div class="box">
+        哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+        哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+        哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+    </div>
+    <div class="happy">
+        哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+        哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+        哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+    </div>
+</body>
+</html>

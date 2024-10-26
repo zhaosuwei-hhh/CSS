@@ -1,0 +1,33 @@
+<!-- visibility:inherit 继承上一个父元素的可见性 -->
+            <!-- visible 对象显示 -->
+            <!-- hidden 对象隐藏 -->
+            <!-- collapse 用来隐藏表格的行或列，对于表格外的其他对象，相当于hidden -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .one {
+            visibility: hidden;
+            /* 元素被隐藏，但原有位置仍然被保留，后面的盒子无法上来 */
+            visibility: visible;
+            /* 元素显示 */
+            /* hidden和visible同时存在，则后来者居上 */
+            width: 200px;
+            height: 200px;
+            background-color: palegoldenrod;
+        }
+        .two {
+            width: 300px;
+            height: 300px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="one">喜欢</div>
+    <div class="two">开心</div>
+</body>
+</html>
