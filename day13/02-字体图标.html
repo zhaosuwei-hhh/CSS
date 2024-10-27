@@ -1,0 +1,41 @@
+<!-- iconfont字体图标 -->
+<!-- 展示的是图标，实际上是字体 -->
+<!-- 轻量性、灵活性、兼容性 -->
+ <!-- 只适合简单的小图标，复杂的只能用精灵图 -->
+ <!-- 网址 http://icomoon.io -->
+
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 字体声明 */
+        @font-face {
+        font-family: 'icomoon';
+        src:  url('fonts/icomoon.eot?lozwy3');
+        src:  url('fonts/icomoon.eot?lozwy3#iefix') format('embedded-opentype'),
+        url('fonts/icomoon.ttf?lozwy3') format('truetype'),
+        url('fonts/icomoon.woff?lozwy3') format('woff'),
+        url('fonts/icomoon.svg?lozwy3#icomoon') format('svg');
+        font-weight: normal;
+        font-style: normal;
+        font-display: block;
+        /* 解压缩，然后从style.css里面复制 */
+    }
+    span {
+        font-family: 'icomoon';
+        font-size: 30px;
+        color: palegoldenrod;
+        /* 解压缩完把fonts放到根目录里面，和代码是兄弟关系; */
+    }
+    </style>
+</head>
+<body>
+    <span></span><span>h</span><span></span>
+</body>
+</html>
+
+<!-- 字体图标的追加 -->
+<!-- 1.app  2.import icons   3.selection.json -->

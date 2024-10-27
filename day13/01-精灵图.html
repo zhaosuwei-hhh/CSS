@@ -1,0 +1,34 @@
+<!-- 有效减少服务器接受和发送请求的次数，提高页面加载速度，也叫css雪碧 -->
+<!-- 精灵技术针对背景图片 把多个小背景图整合到一张大图上面 -->
+<!-- <background-position> -->
+<!-- 往上走  y  或者往左走   x  都是负值 -->
+<!-- 当给一个背景盒子图片时，默认贴着左上角的 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1 {
+            width: 50px;
+            height: 50px;
+            margin: 100px auto;
+            background: url()  no-repeat  -150px -140px;
+            /* 默认来说，大的精灵图是左上对齐盒子的 */
+            /* url 里写上大的精灵图链接，-150px是指往左走150px  -140px是指向上走140px */
+            /* 精灵图里面一般来说都是负值  先写x 再写y*/
+            /* 这两个数值属于background-position */
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+</body>
+</html>
+
+链接书写
+同一级<img src="./图片名" />
+下一级<img src="同一级文件夹名/图片名" />
+上一级<img src="../图片名" />
+上上级<img src="../../图片名" />
