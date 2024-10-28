@@ -1,0 +1,48 @@
+<!-- 无宽高 四个边框选取不同颜色，可出现四个三角形 -->
+<!-- 只想要一个就把其他三个设置成透明色transparent -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .big {
+            position: relative;
+            /* 子绝父相 */
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            margin-top: 10px;
+        }
+
+        span {
+            position: absolute;
+            left: 50%;
+            margin-left: -2.5px;
+            top: -160px;
+            width: 0px;
+            height: 0px;
+            border: transparent solid 8px;
+            border-bottom: pink solid 8px;
+
+            line-height: 0px;
+            font-size: 0;
+            /* 这两步主要是为了兼容性 */
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="big">
+        <span></span>
+    </div>
+</body>
+
+</html>

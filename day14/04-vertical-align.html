@@ -1,0 +1,37 @@
+<!-- 用于设置图片或表单（行内块元素） 与文字的垂直对齐 -->
+<!-- 对块级元素使用是无效的 -->
+<!-- baseline   放在基线上  g会漏出一半 -->
+<!-- top        顶对高顶 -->
+<!-- middle     中部 -->
+<!-- bottom     顶对低顶    g不会漏出-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    div {
+        margin-bottom: 10px;
+    }
+    .one img {
+        vertical-align: bottom;
+    }
+    .two img {
+        vertical-align: middle;
+    }
+    .three img {
+        vertical-align: top;
+    }
+    .four img {
+        vertical-align: baseline;
+    }
+    </style>
+</head>
+<body>
+    <div class="one "><img src="./1.png" alt="">开心的锣鼓g</div>
+    <div class="two"><img src="./1.png" alt="">嘻嘻g</div>
+    <div class="three"><img src="./1.png" alt="">哈哈g</div>
+    <div class="four"><img src="./1.png" alt="">啦啦g</div>
+</body>
+</html>

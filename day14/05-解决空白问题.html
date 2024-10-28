@@ -1,0 +1,31 @@
+<!-- 解决边框和图片之间的空白 -->
+ <!-- 法1：把img里的vertical-align的属性值改成top /middle / bottom -->
+ <!-- 只要不是默认值baseline就好 -->
+ <!-- 法2：把图片img转换成块级元素 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            border: pink solid 5px ;
+            margin-bottom: 10px;
+        }
+        /* 法1 */
+        .one img {
+            vertical-align: top;
+        }
+        /* 法2 */
+        .two img {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="one"><img src="./1.png" alt=""></div>
+    <div class="two"><img src="./1.png" alt=""></div>
+</body>
+</html>
