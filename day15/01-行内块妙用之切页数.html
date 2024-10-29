@@ -1,0 +1,47 @@
+<!-- 盒子如果添加了text-align：center  -->
+<!-- 那么里面所有的行内元素和行内块元素都会水平居中对齐 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        div {
+            width: 450px;
+            height: 30px;
+            background-color: pink;
+            
+            text-align: center;
+        }
+        a {
+            display: inline-block;
+            border: black solid 2px;
+            width: 40px;
+            height: 26px;
+            color: white;
+            text-decoration: none;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <a href="#">&lt;</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">6</a>
+        <a href="#">7</a>
+        <a href="#">&gt;</a>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 边框的顺序是上、右、下、左，顺时针转动 */
+        span {
+            position: absolute;
+            /* 做到子绝父相 */
+            left: 50%;
+            top: 0;
+            display: inline-block;
+            /* span是行内元素，要进行转化 */
+            border-color: transparent red transparent transparent;
+            border-style: solid;
+            /* 把边框设成实线 */
+            border-width: 20px 10px 0px 0px ;
+            /* 下面和左面都要是0px */
+        
+        }
+
+        .big {
+            position: relative;
+            width: 200px;
+            height: 20px;
+            background-color: white;
+            margin: auto;
+        }
+        .left {
+            background-color: rgba(220, 211, 195, 0.3);
+            width: 110px;
+            height: 20px;
+            float: left;
+            text-align: center;
+        }
+        .right {
+            background-color: red;
+            width: 90px;
+            height: 20px;
+            float: right;
+            text-align: center;
+        }
+        .right i {
+            color: white;
+            font-size: 14px;
+            
+        }
+        .left i  {
+            color: rgb(167, 155, 155);
+            font-size: 10px;
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+    <div class="big">
+        <div class="left">
+            <i>2999</i>
+            <span></span>
+        </div>
+        <div class="right">
+            <i>599</i>
+        </div>
+        
+    </div>
+    
+</body>
+</html>
