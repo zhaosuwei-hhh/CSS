@@ -1,0 +1,70 @@
+<!-- 溢出盒子的部分用省略号来代替 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            margin-bottom: 20px;
+        }
+
+        .one {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            white-space: nowrap;
+            /* 强制在一行中显示文本，不允许换行 */
+        }
+
+        .two {
+            width: 100px;
+            height: 100px;
+            background-color: palegreen;
+            white-space: normal;
+            /* 自动换行 */
+        }
+
+        .three {
+            width: 100px;
+            height: 50px;
+            background-color: palegoldenrod;
+            overflow: hidden;
+            /* 把溢出的部分隐藏起来 */
+        }
+        .four {
+            width: 100px;
+            height: 31px;
+            background-color: skyblue;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            /* 把文字溢出部分用省略号来代替 */
+        }
+
+        /* 多行显示省略号 */
+        .five {
+            width: 100px;
+            height: 50px;
+            background-color: pink;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            /* 这个数字表示显示几行，在这一行后面采用省略号 */
+            -webkit-box-orient: vertical;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="one">刘胜莹是超级无敌大傻子哈哈哈红红火火恍恍惚惚</div>
+    <div class="two">刘胜莹是超级无敌大傻子哈哈哈红红火火恍恍惚惚</div>
+    <div class="three">刘胜莹是超级无敌大傻子哈哈哈红红火火恍恍惚惚</div>
+    <div class="four">刘胜莹是超级无敌</div>
+    <div class="five">刘胜莹是超级无敌红红火火恍恍惚惚哈哈哈哈哈哈</div>
+
+</body>
+
+</html>
