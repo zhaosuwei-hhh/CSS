@@ -1,0 +1,65 @@
+<!-- 音频和视频 -->
+<!-- 属于行内块标签 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 1.视频  双标签 -->
+    <!-- mp4、WebM、Ogg 这几个都可以，但为了兼容性考虑，选择用MP4最稳妥 -->
+    <video src="./2.mp4" 
+     
+    autoplay="autoplay"
+    
+    muted="muted"
+   
+    controls="controls"
+    
+    loop="loop"
+    
+    preload="preload"
+    
+    poster="">
+
+    </video>
+    <!-- 1.1自动播放 -->
+     <!-- 自动播放默认被谷歌所禁止了，通过autoplay可以解开 -->
+    <!-- autoplay="autoplay" -->
+
+    <!-- 1.2静音播放 -->
+    <!-- muted="muted" -->
+
+    <!-- 1.3出现控制键，让用户自己调节 -->
+    <!-- controls="controls" -->
+
+    <!-- 1.4重复播放 -->
+    <!-- loop="loop" -->
+
+    <!-- 1.5是否预先加载 auto预先 none不预先 -->
+    <!-- 注 若有autoplay，则忽略preload -->
+    <!-- preload="preload" -->
+
+    <!-- 1.6若没有加载项，且没有播放视频，则显示所准备的图片> -->
+    <!-- poster="" -->
+
+
+
+    <!-- 2.音频  双标签 -->
+    <!-- mp4、Wav、Ogg 这几个都可以，但为了兼容性考虑，选择用MP4最稳妥 -->
+    <audio src="./2.mp4"
+    autoplay="autoplay"
+    muted="muted" 
+    controls="controls" 
+    loop="loop" 
+    preload="preload"
+    poster="">
+    
+    </audio>
+    <!-- 音频与视频的使用基本一样，但是音频的自动播放在谷歌里被强行禁止，无法解决 -->
+
+    
+</body>
+</html>
