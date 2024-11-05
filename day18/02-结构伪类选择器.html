@@ -1,0 +1,192 @@
+<!-- 结构伪类选择器，一定是从父级里面选择子级 -->
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 对所有的ul */
+        ul {
+            margin-bottom: 50px;
+        }
+        /* 对所有的li */
+        ul li {
+            width: 50px;
+            height: 50px;
+            background-color: palegoldenrod;
+            margin-bottom: 10px;
+            list-style: none;
+            line-height: 50px;
+            text-align: center;
+        }
+        /* 对section里面的div和p */
+        section div,p {
+            width: 50px;
+            height: 50px;
+            background-color: palegoldenrod;
+        }
+        section div {
+            margin-bottom: 10px;
+        }
+
+
+
+
+        /* 属性值为one的ul里面的第一个孩子，注意ul后面必须跟一个空格， */
+        /* 冒号和first中间不能存在空格，否则不起效果 */
+        .one :first-child {
+            background-color: skyblue;
+        }
+
+        /* 属性值为one的ul里面的最后一个孩子 */
+        .one :last-child {
+            background-color: palevioletred;
+        }
+
+        /* 属性值为one的ul里面第n个孩子 nth-child(第几个) */
+        /* 注意必须给定括号和里面的数字 */
+        .one :nth-child(5) {
+            background-color: palegreen;
+        }
+
+
+
+
+
+        /* 属性值为two的ul里面的符合条件的孩子 nth-child(条件) */
+        /* odd为奇数 */
+        .two :nth-child(odd) {
+            background-color: #e6dd9e;
+        }
+        /* even为偶数 */
+        .two :nth-child(even) {
+            background-color: #70da85;
+        }
+
+
+
+
+        /* 属性值为three的ul里面的符合条件的孩子 nth-child(条件) */
+        /* n从0开始到无法再进行，但自动忽略0 */
+        .three :nth-child(2n) {
+            background-color: #692c9e;
+        }
+
+        .three :nth-child(2n+1) {
+            background-color: #18696f;
+        }
+
+
+
+
+        /* 属性值为four的ul里面的符合条件的孩子 nth-child(条件) */
+        /* 从第五个开始到最后 */
+        .four :nth-child(n+5) {
+            background-color: #18cb45;
+        }
+
+        /* 前5个 */
+        .four :nth-child(-n+5) {
+            background-color: #082d7e;
+        }
+
+
+
+        /* 书写格式，父级+空格+子级+:  */
+        /* 第一种写法，是先找父级里面的第五个孩子，然后再看孩子是否满足要求类型 */
+                    /* 若满足就显示，若不满足就作废 */
+        .five div:nth-child(5) {
+            background-color: #bc6666;
+        }
+        /* 显示 */
+        .five div:nth-child(3) {
+            background-color: #bc6666;
+        }
+        /* 作废 */
+
+
+
+        /* 第二种写法,直接根据对孩子的要求先筛选出符合要求的孩子进行排序 */
+                    /* 然后在看是第几个 */
+        .five div:nth-of-type(3) {
+            background-color: #17b381;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <ul class="one">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+    </ul>
+
+
+    <ul class="two">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+    </ul>
+
+
+    <ul class="three">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+        <li>11</li>
+        <li>12</li>
+    </ul>
+
+    <ul class="four">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+        <li>11</li>
+        <li>12</li>
+    </ul>
+
+
+    <section class="five">
+        <div>1</div>
+        <div>2</div>
+        <p>3</p>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <p>8</p>
+        <div>9</div>
+        <div>10</div>
+        <p>11</p>
+        <div>12</div>
+        
+        
+    </section>
+
+
+
+</body>
+</html>

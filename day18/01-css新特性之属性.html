@@ -1,0 +1,51 @@
+<!-- 属性选择器、类选择器、伪类选择器，权重都为10 -->
+<!-- 标签选择器权重为1 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 选择带有value属性的input */
+        input[value] {
+            background-color: palegreen;
+        }
+        /* 选择带有type属性的，且属性值等于search的input */
+        input[type=search] {
+            background-color: palegoldenrod;
+        }
+        /* 选择带有class属性的，且属性值以icon开头的div */
+        div[class^=icon] {
+            width: 20px;
+            height: 20px;
+            margin-bottom: 10px;
+            background-color: peru;
+        }
+        /* 选择带有class属性的，且属性值以data结尾div */
+        div[class$=data] {
+            width: 30px;
+            height: 40px;
+            background-color: brown;
+            margin-bottom: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <input type="text" value="" id="">
+    <input type="search">
+    <div class="icon1"></div>
+    <div class="icon2"></div>
+    <div class="icon3"></div>
+    <div class="icon4"></div>
+    <div class="one"></div>
+    <div class="two"></div>
+    <div class="three"></div>
+    <div class="1data"></div>
+    <div class="2data"></div>
+    <div class="3data"></div>
+    <div class="4data"></div>
+</body>
+</html>
