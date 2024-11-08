@@ -1,0 +1,38 @@
+/* 共同样式，修改方便 */
+
+/* 板心 */
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* 快捷导航 */
+.shortcut {
+    height: 31px;
+    background-color: #f1f1f1;
+}
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+.shortcut ul li {
+    float: left;
+}
+.red {
+    color: rgba(211, 8, 8, 0.836);
+}
+.shortcut .fr ul li:nth-child(2n) {
+    width: 1px;
+    height: 12px;
+    background-color: #666;
+    margin: 9px 15px 0px;
+    /* 上  左右   下 */
+}
+/* 伪元素标签 */
+.arrow-icon::after {
+    /* content 里面放所要显示的内容 */
+    content: '1';
+}
