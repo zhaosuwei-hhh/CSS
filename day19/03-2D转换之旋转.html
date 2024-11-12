@@ -1,0 +1,33 @@
+<!-- transform对元素进行 1.位移translate  2.旋转rotate  3.缩放scale -->
+<!-- 2D为二维坐标系，向右为x轴正半轴  向下为y轴正半轴  若要向上向左走，则用负号来表示 -->
+<!-- transform:rotate(度数)单位为deg -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 正值表示顺时针，负值表示逆时针 */
+        /* 旋转中心默认是元素中心点 */
+        div {
+            /* 对于img元素来说，规定宽高一个，则另一方会等比例放大或缩小 */
+            width: 200px;
+            height: 100px;
+            border: solid 1px red;
+        }
+        img {
+            width: 100%;
+        }
+
+        div:hover::after {
+            content: "";
+            transform: rotate(45deg);
+            transition: all 0.3;
+        }
+    </style>
+</head>
+<body>
+    <div class="picture"><img src="./蛋.jpg" alt=""></div>
+</body>
+</html>

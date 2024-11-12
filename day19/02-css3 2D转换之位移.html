@@ -1,0 +1,76 @@
+<!-- transform对元素进行 1.位移translate  2.旋转rotate  3.缩放scale -->
+<!-- 2D为二维坐标系，向右为x轴正半轴  向下为y轴正半轴  若要向上向左走，则用负号来表示 -->
+<!-- 注意，transform对行内元素是没用的 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 只在x轴上移动 */
+        /* 1.不可省略y轴上的0 */
+        .right-one {
+            background-color: palevioletred;
+            width: 100px;
+            height: 100px;
+            transform: translate(50px,0);
+        }
+        /* 2.translateX  X要大写 里面只写一个参数*/
+        .right-two {
+            background-color: rgb(195, 95, 33);
+            width: 100px;
+            height: 100px;
+            transform: translateX(50px);
+        }
+
+
+        /* 只在y轴上移动(与x轴都是类似的) */
+        /* 1.不可省略x轴上的0 */
+        .bottom-one {
+            background-color: rgb(48, 117, 111);
+            width: 100px;
+            height: 100px;
+            transform: translate(0,20px);
+        }
+        /* 2.translateY  Y要大写 里面只写一个参数*/
+        .bottom-two {
+            background-color: rgb(13, 160, 40);
+            width: 100px;
+            height: 100px;
+            transform: translateY(20px);
+        }
+
+
+        /* 子绝父相，让子盒子居中 */
+        /* translate里面的百分比都是相对于自身 */
+        /* 不要忘记负号！ */
+        .father {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+        }
+        .son {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            /* translate 里面的-50%是相对于自身来说 */
+            transform: translate(-50%,-50%);
+            width: 50px;
+            height: 50px;
+            background-color: #dca0dc;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="right-one"></div>
+    <div class="right-two"></div>
+    <div class="bottom-one"></div>
+    <div class="bottom-two"></div>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+</body>
+</html>
