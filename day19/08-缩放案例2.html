@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zn-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            list-style: none;
+        }
+        div {
+            margin: auto;
+            margin-top: 50px;
+            width: 400px;
+            height: 100px;
+            border: 1px solid black;
+        }
+        div ul li {
+            display: block;
+            float: left;
+            margin-top: 20px;
+            margin-left: 5px;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            border-radius: 50%;
+            border: 1px solid green;
+            transition: all 0.5s;
+        }
+        li:hover {
+            transform: scale(1.5);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+        </ul>
+    </div>
+</body>
+</html>

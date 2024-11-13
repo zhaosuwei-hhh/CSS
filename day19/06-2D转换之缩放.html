@@ -1,0 +1,44 @@
+<!-- transform:scale(x,y)  注意x与y之间要用逗号隔开  后面不跟单位-->
+<!-- transform:scale(2,3)宽扩大两倍，高扩大三倍 -->
+<!-- 若只写一个参数，默认这两个都是这样 -->
+
+
+<!-- scale的优势 -->
+<!-- 普通用宽高来放大的话，是上沿不变(高向下延伸) -->
+<!-- scale不会影响其他盒子，而且可以移动缩放的中心点 -->
+
+
+<!DOCTYPE html>
+<html lang="zn-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .two {
+            width: 200px;
+            height: 200px;
+            margin: auto;
+            margin-top: 100px;
+            background-color: pink;
+            /* 用来设置中心点 */
+            transform-origin: left bottom;
+        }
+        .two:hover {
+            /* 放大 */
+            /* transform: scale(3,2); */
+            /* 简便写法，一个参数 */
+            /* transform: scale(2); */
+            transform: scale(0.5,1.8);
+        }
+        .one {
+            height: 50px;
+            background-color: palegreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="two"></div>
+    <div class="one"></div>
+</body>
+</html>

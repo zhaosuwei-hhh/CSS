@@ -1,0 +1,31 @@
+<!-- 同时使用多个转换,其格式为:  -->
+<!-- transform: translate(x,y) rotate() scale(x,y)  -->
+<!-- 中间用空格隔开 -->
+
+<!-- 注意 1.其顺序会影响转换的效果。(先旋转会改变坐标轴方向) -->
+     <!-- 2.当我们同时有位移和其他属性的时候,记得要将位移放到最前 -->
+
+
+
+<!DOCTYPE html>
+<html lang="zn-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            transition: all 0.5s;
+        }
+        div:hover {
+            transform: translate(30px,30px) rotate(180deg) scale(1.5);
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

@@ -2,7 +2,7 @@
 <!-- 2D为二维坐标系，向右为x轴正半轴  向下为y轴正半轴  若要向上向左走，则用负号来表示 -->
 <!-- 注意，transform对行内元素是没用的 -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zn-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -42,6 +42,7 @@
         }
 
 
+
         /* 子绝父相，让子盒子居中 */
         /* translate里面的百分比都是相对于自身 */
         /* 不要忘记负号！ */
@@ -61,7 +62,28 @@
             height: 50px;
             background-color: #dca0dc;
         }
-        
+
+
+
+        /* 转换中心点默认是盒子中心位置,x默认是50%，y也默认的50% */
+        /* 以下是如何设置转换中心点 transform-origin:x y;   x、y可以是方位名词或者像素数值 */
+        /* x与y之间要用空格隔开 */
+        .origin {
+            width: 100px;
+            height: 50px;
+            background-color: pink;
+            margin: auto;
+            /* 1.以左下角为旋转中心来进行旋转 */
+            /* transform-origin:left bottom ; */
+
+
+            /* 2.用数值来表示，相对于坐标哈，以左上为原点 */
+            transform-origin: 20px 50px;
+        }
+        .origin:hover {
+            transform: rotate(45deg);
+            /* transform-origin: ; */
+        }
     </style>
 </head>
 <body>
@@ -72,5 +94,7 @@
     <div class="father">
         <div class="son"></div>
     </div>
+
+    <div class="origin"></div>
 </body>
 </html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zn-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .BIG-one {
+            width: 100px;
+            height: 20px;
+            border: 1px solid black;
+        }
+        /* 利用伪元素来建立子盒子 */
+        .BIG-one::after {
+            content: "";
+            display: block;
+            top: 0;
+            right: 5px;
+            width: 10px;
+            height: 10px;
+            border-right: 1px solid rgb(221, 15, 15);
+            border-bottom: 1px solid rgb(192, 23, 23);
+            transform: rotate(45deg);
+        }
+
+
+
+
+        /* 鼠标经过时三角形进行翻转 */
+        .BIG-two {
+            margin-top: 20px;
+            position: relative;
+            width: 100px;
+            height: 20px;
+            border: 1px solid black;
+        }
+        /* 利用伪元素来建立子盒子 */
+        .BIG-two::after {
+            content: "";
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            width: 10px;
+            height: 10px;
+            border-right: 1px solid rgb(221, 15, 15);
+            border-bottom: 1px solid rgb(192, 23, 23);
+            transform: rotate(45deg);
+            transition: all 0.5s;
+        }
+        .BIG-two:hover::after {
+            transform: rotate(225deg);
+           
+
+        }
+    </style>
+</head>
+<body>
+    <div class="BIG-one">
+        <div class="SMALL-one"></div>
+    </div>
+    <div class="BIG-two">
+        <div class="SMALL-two"></div>
+    </div>
+</body>
+</html>
