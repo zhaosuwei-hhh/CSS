@@ -1,0 +1,88 @@
+<!-- 1.@keyframes 规定动画。 -->
+
+<!-- 2.animation 所有动画属性的简写属性，除了animation-play-state属性。 -->
+
+<!-- 3.animation-name 规定@keyframes动画的名称。(必须的) -->
+
+<!-- 4.animation-duration 规定动画完成一个周期所花费的秒或毫秒，默认是0。(必须的) -->
+
+<!-- 5.animation-timing-function 规定动画的速度曲线，默认是“ease”。 -->
+
+<!-- 6.animation-delay 规定动画何时开始，默认是0。 -->
+
+<!-- 7.animation-iteration-count 规定动画被播放的次数，默认是1，还有infinite -->
+
+<!-- 8.animation-direction 规定动画是否在下一周期逆向播放，默认是“normal“,alternate逆播放 -->
+
+<!-- 9.animation-play-state 规定动画是否正在运行或暂停。默认是"running",还有"pause"。 -->
+
+<!-- 10.animation-fill-mode 规定动画结束后状态，保持forwards回到起始backwards -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 1.定义 */
+        @keyframes move {
+
+            /* 开始状态 */
+            0% {
+                transform: translateX(0px);
+            }
+
+            /* 结束状态 */
+            100% {
+                transform: translate(500px);
+            }
+        }
+
+        div {
+            width: 50px;
+            height: 50px;
+            background-color: pink;
+            /* 2.调用动画   必须写上两个参数*/
+
+            /* 动画名称 */
+            animation-name: move;
+
+            /* 持续时间    默认是0*/
+            animation-duration: 3s;
+
+            /* 运动曲线 */
+            animation-timing-function: ease;
+
+            /* 何时开始   默认是0 */
+            animation-delay: 1s;
+
+            /* 动画重复的次数   默认是1  无限是infinite */
+            animation-iteration-count: infinite;
+
+            /* 是否反方向播放   默认不   alternate是反方向 */
+            animation-direction: alternate;
+
+            /* 是否回到起始状态   默认回  不回forwards */
+            /* animation-fill-mode: backwards;  回 */
+            /* 和重复次数和反向播放相冲突，会被抵消掉 */
+            animation-fill-mode: forwards;
+
+            /* 规定动画是否正在进行或暂停 */
+            /* 默认running一直走    paused是停止 */
+            animation-play-state: running;
+        }
+
+        div:hover {
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>
