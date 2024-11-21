@@ -1,0 +1,46 @@
+<!-- animation-timing-function  规定了动画的速度曲线，默认是ease -->
+<!-- linear 从头到尾匀速 -->
+<!-- ease  低速开始，加快  结束前变慢 -->
+<!-- ease-in   动画以低速开始 -->
+<!-- ease-out   动画以低速结束 -->
+<!-- ease-in-out   动画以低速开始和结束 -->
+
+
+<!-- steps()指定了时间函数中的间隔数量（步长） -->
+<!-- 相当于一节一节走的  分几步来完成动画-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            font-size: 20px;
+            /* 让文字强行在一行上显示 */
+            white-space: nowrap ;
+            /* 将溢出的文字隐藏 */
+            overflow: hidden;
+            width: 0px;
+            height: 30px;
+            background-color: pink;
+            animation: w 4s forwards steps(10) ;
+        }
+        @keyframes w {
+            0% {
+
+            }
+            100% {
+                width: 200px;
+
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="w">天天开心哈哈哈哈哈哈</div>
+</body>
+</html>

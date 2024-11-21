@@ -1,0 +1,58 @@
+<!-- 3D里可以让物体沿着某个轴去进行旋转 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 150px;
+            margin: 50px auto;
+            /* 透视，perspective的值越小越明显 */
+            perspective: 200px;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            transition: all 0.5s;
+        }
+
+
+        /* 1.rotateX  沿x轴旋转 */
+        .one img:hover {
+            /* 正值时，像人向后面倒 */
+            /* 左手准则，大拇指指向x正方向（向右），四指弯曲方向即为旋转方向 */
+            transform: rotateX(45deg);
+        }
+
+        /* 2.rotateY  沿y轴旋转*/
+        .two img:hover {
+            /* 左手准则，大拇指指向y正方向（向下），四指弯曲方向即为旋转方向 */
+            transform: rotateY(45deg);
+        }
+
+        /* 3.rotateZ  沿z轴旋转 */
+        .three img:hover {
+            /* 左手准则，大拇指指向Z正方向（垂直于纸面向外），四指弯曲方向即为旋转方向 */
+            transform: rotateZ(45deg);
+        }
+
+        /* 4.总和 */
+        .four img:hover {
+            /* transform: rotate3d(x,y,z,deg); */
+            /* 不要忘记3d */
+            /* 1表示执行后面的旋转角度，0表示不执行 */
+            transform: rotate3d(1,1,0,45deg);
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="one"><img src="./树.jpg" alt=""></div>
+    <div class="two"><img src="./树.jpg" alt=""></div>
+    <div class="three"><img src="./树.jpg" alt=""></div>
+    <div class="four"><img src="./树.jpg" alt=""></div>
+</body>
+</html>

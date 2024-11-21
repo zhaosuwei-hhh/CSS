@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .map {
+            position: relative;
+            width: 747px;
+            height: 617px;
+            margin: auto;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+        }
+        .city {
+            position: absolute;
+            top: 250px;
+            right: 227px;
+            /* background-color: #fff; */
+            color: aliceblue;
+        }
+        .tb {
+            top: 520px;
+            right: 100px;
+            /* 其余的属性继承上面的 */
+        }
+
+        .dotted {
+            width: 8px;
+            height: 8px;
+            background-color: #09f;
+            border-radius: 4px;
+        }
+        .city div[class^="pulse"] {
+            /* 保证小波纹盒子在父盒子里水平且垂直居中   */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 8px;
+            height: 8px;
+            /* 用盒子阴影来写 */
+            box-shadow: 0 0 12px #09f;
+            border-radius: 4px;
+            /* 动画的简写 */
+            animation: pulse 1.2s linear infinite;
+            /* linear 表示匀速 */
+            /* infinite  表示循环 */
+        }
+        /* 权重问题 */
+        .city div.pulse2 {
+            animation-delay: 0.4s;
+            /* 比pulse1 晚0.4s */
+        }
+        .city div.pulse3 {
+            animation-delay: 0.8s;
+            /* 比pulse1 晚0.8s */
+        }
+        /* 定义动画 */
+        @keyframes pulse {
+            0% {
+
+            }
+            70% {
+                width: 40px;
+                height: 40px;
+                border-radius: 20px;
+                /* 透明度 */
+                /* 1是最透明，看不见 */
+                opacity: 1;
+            }
+            100% {
+                width: 70px;
+                height: 70px;
+                border-radius: 35px;
+                /* 0是完全不透明 */
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="map">
+        <img src="./01-map.png" alt="">
+        <div class="city">
+            <div class="dotted"></div>
+            <div class="pulse1"></div>
+            <div class="pulse2"></div>
+            <div class="pulse3"></div>
+        </div>
+        <div class="city tb">
+            <div class="dotted"></div>
+            <div class="pulse1"></div>
+            <div class="pulse2"></div>
+            <div class="pulse3"></div>
+        </div>
+    </div>
+</body>
+</html>

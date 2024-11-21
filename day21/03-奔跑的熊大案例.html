@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            position: relative;
+            background-color: #ccc;
+        }
+        
+        div {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: url(./03-熊.png) no-repeat;
+            /* 元素可以添加多个动画，中间用逗号，隔开 */
+            /* 不能再写一个，否则后面的会覆盖掉前面的 */
+            animation: bear 1s steps(8) infinite,w 3s forwards;
+            /* forwards  是指走到最后位置以后停下来 */
+        }
+        /* 定义动画 */
+        @keyframes bear {
+            0% {
+                background-position: 0 0;
+            }
+            100% {
+                /* 往左走就是负值 */
+                background-position: -750px 0;
+            }
+        }
+        @keyframes w {
+            0% {
+                left: 0;
+            }
+            100% {
+                left: 50%;
+                /* margin-left: -50px; */
+                transform: translateX(-50%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="w"></div>
+</body>
+</html>
