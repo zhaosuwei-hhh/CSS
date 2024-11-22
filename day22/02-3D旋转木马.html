@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            perspective: 1000px;
+        }
+        section {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            margin: 100px auto;
+            transform-style: preserve-3d;
+            /* 调用动画 */
+            animation: w 5s linear infinite;
+            /* linear 是匀速 */
+            background: url(./1.jpg) no-repeat;
+
+        }
+        section:hover {
+            /* 鼠标放上去就停止 */
+            animation-play-state: paused;
+        }
+        div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url(./dog.png) no-repeat;
+        }
+        section div:nth-child(1) {
+            transform: rotateY(0deg)  translateZ(300px);
+        }
+        section div:nth-child(2) {
+            /* 这里是先旋转再移动 */
+            transform: rotateY(60deg) translateZ(300px);
+        }
+        section div:nth-child(3) {
+            /* 这里是先旋转再移动 */
+            transform: rotateY(120deg) translateZ(300px);
+        }
+        section div:nth-child(4) {
+            /* 这里是先旋转再移动 */
+            transform: rotateY(180deg) translateZ(300px);
+        }
+        section div:nth-child(5) {
+            /* 这里是先旋转再移动 */
+            transform: rotateY(240deg) translateZ(300px);
+        }
+        section div:nth-child(6) {
+            /* 这里是先旋转再移动 */
+            transform: rotateY(300deg) translateZ(300px);
+        }
+
+        /* 添加动画效果，让其自动旋转 */
+        @keyframes w {
+            0% {
+
+            }
+            100% {
+                transform: rotate3d(0,1,0,360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            width: 120px;
+            height: 35px;
+            /* 不仅要给front、bottom进行透视，还要对box进行透视，所以加到li上
+            里面的子盒子都会有透视效果 */
+            perspective: 500px;
+            float: left;
+            margin-right: 10px;
+        }
+        .box {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: all .5s;
+        }
+        .box:hover {
+            transform: rotateX(90deg);
+        }
+        .front,
+        .bottom {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+        }
+        .front {
+            background-color: pink;
+            z-index: 1;
+            transform: translateZ(17.5px);
+        }
+        .bottom {
+            /* 不能写两个transform，会进行覆盖，导致不显示，要写到一个里面，用空格去隔开 */
+            /* 如果有移动和其他样式，必须先写移动 */
+            /* 要注意旋转中心点  需要把front向前移动 */
+            transform: translateY(17.5px) rotateX(-90deg);
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>
+            <div class="box">
+                <div class="front">1</div>
+                <div class="bottom">2</div>
+            </div>
+        </li>
+        <li>
+            <div class="box">
+                <div class="front">1</div>
+                <div class="bottom">2</div>
+            </div>
+        </li><li>
+            <div class="box">
+                <div class="front">1</div>
+                <div class="bottom">2</div>
+            </div>
+        </li><li>
+            <div class="box">
+                <div class="front">1</div>
+                <div class="bottom">2</div>
+            </div>
+        </li><li>
+            <div class="box">
+                <div class="front">开心</div>
+                <div class="bottom">每一天</div>
+            </div>
+        </li>
+        
+    </ul>
+</body>
+</html>
